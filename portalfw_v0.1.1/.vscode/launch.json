@@ -1,0 +1,25 @@
+{
+    // Configuration du debug PHP dans Chrome
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://portail.local/index.php?XDEBUG_SESSION_START=vscode",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9000
+        }
+    ],
+    "compounds": [
+      {
+        "name": "Chrome + XDebug",
+        "configurations": ["Launch Chrome", "Listen for XDebug"]
+      }
+    ]
+}
